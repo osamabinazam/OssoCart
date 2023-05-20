@@ -74,6 +74,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'OssoCart.wsgi.application'
+AUTH_USER_MODEL = 'accounts.Account'
 
 
 # Database
