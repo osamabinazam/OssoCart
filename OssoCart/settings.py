@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'ossocart.apps.OssocartConfig',
     'category.apps.CategoryConfig',
     'accounts.apps.AccountsConfig',
+    'store.apps.StoreConfig',
     
 ]
 
