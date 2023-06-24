@@ -10,3 +10,5 @@ def Home(request):
         'products':products
     }
     return render(request, 'ossocart/home.html', context)
+
+
