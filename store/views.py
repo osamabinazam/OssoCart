@@ -5,7 +5,7 @@ from category.models import Category
 
 # Rendering Store that list all available Products
 
-def Store(request, category_slug=None):
+def store(request, category_slug=None):
     categories = None
     products = None
     
@@ -20,4 +20,9 @@ def Store(request, category_slug=None):
         'products':products,
         'product_counts':product_counts,
     }
-    return render(request, 'ossocart/store.html', context)
+    return render(request, 'store/store.html', context)
+
+def product_detail(request, category_slug, product_slug):
+    
+    context ={}
+    return render(request, 'store/product_detail.html', context=context)
