@@ -1,6 +1,7 @@
 from django.db import models
 # Necessary imports
 from category.models import Category
+from django.urls import reverse
 
 # Create your models here.
 
@@ -19,8 +20,10 @@ class Product(models.Model):
     create_date = models.DateTimeField(auto_now_add=True)
     modify_date = models.DateTimeField(auto_now = True)
      
-    # Next Go to admin of store app
-    # Prepapulate the slug 
+    
+    # Get the url
+    def get_url(self):
+        return reverse('product-detail', args=[self.category.slug, self.slug])
     
     # String Representation 
     def __str__(self):
